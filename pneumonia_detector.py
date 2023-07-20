@@ -47,8 +47,7 @@ if LOGGED_IN == True:
                             st.info(result)
     
         def predict(img):
-            # model_path = "C:/Users/Tejo Vardhan/Downloads/pneumonia.h5"
-            model_path = "C:/Users/Tejo Vardhan/Downloads/transfer learning.h5"
+            model_path = "transfer_learning.h5"
             interpreter = tf.keras.models.load_model(model_path)
             # interpreter.summary(print_fn=lambda x: st.text(x))
             image = img.convert('RGB')
@@ -74,19 +73,19 @@ if LOGGED_IN == True:
     with tab12:
         st.header("The layers used in the model:")
         st.text(" ")
-        model_path = "C:/Users/Tejo Vardhan/Downloads/transfer learning.h5"
+        model_path = "images/transfer_learning.h5"
         interpreter = tf.keras.models.load_model(model_path)
         interpreter.summary(print_fn=lambda x: st.text(x))
         
         st.header("The loss plot for validation and train set")
-        image1 = Image.open("C:/Users/Tejo Vardhan/Downloads/val_train_loss.jpeg")
+        image1 = Image.open("images/val_train_loss.jpeg")
         st.image(image1)
         st.caption("The orange line represents the validation curve")
         st.caption("The blue line represents the train curve")
 
         st.header("The accuracy plot for train and test set")
-        image2 = Image.open("C:/Users/Tejo Vardhan/Downloads/acc_train_test.jpeg")
+        image2 = Image.open("images/acc_train_test.jpeg")
         st.image(image2)
         
-        st.write("Check out this [link](https://github.com/TejoVK/Pneumonia_Prediction-using-CNN-) to know more about the code.")
+        st.write("Check out this [link](https://github.com/Singhsansar/Pneumonia-detection) to know more about the code.")
         st.write("The [link](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) to the dataset we used to train our model.")
