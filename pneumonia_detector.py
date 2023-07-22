@@ -6,21 +6,7 @@ import requests
 import os
 import cv2 as cv
 
-custom_theme = {
-    "primaryColor": "#7792E3",
-    "backgroundColor": "#273346",
-    "secondaryBackgroundColor": "#B9F1C0",
-    "textColor": "#FFFFFF",
-    "font": "sans serif"
-}
-
-st.set_theme(custom_theme)
-
-
-
-
 st.set_page_config(page_title='PNEUMONIA DETECTION SYSTEM')
-
 st.markdown("<h1 style='text-align: center; color: white;'>PNEUMONIA DETECTION SYSTEM</h1>", unsafe_allow_html=True)
 st.text("")
 tab1,tab12 = st.tabs(["Check for Pneumonia","Know the Model"])
