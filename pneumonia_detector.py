@@ -6,6 +6,16 @@ import requests
 import os
 import cv2 as cv
 
+custom_theme = {
+    "primaryColor": "#7792E3",
+    "backgroundColor": "#273346",
+    "secondaryBackgroundColor": "#B9F1C0",
+    "textColor": "#FFFFFF",
+    "font": "sans serif"
+}
+
+st.set_theme(custom_theme)
+
 
 
 
@@ -64,12 +74,12 @@ with tab12:
     interpreter.summary(print_fn=lambda x: st.text(x))
 
     st.header("The loss plot for validation and train set")
-    image1 = Image.open("val_train_loss.jpg")
+    image1 = Image.open("image/val_train_loss.jpg")
     st.caption("The orange line represents the validation curve")
     st.caption("The blue line represents the train curve")
 
     st.header("The accuracy plot for train and test set")
-    image2 = Image.open("acc_train_test.jpg")
+    image2 = Image.open("image/acc_train_test.jpg")
     st.image(image2)
     
     st.write("Check out this [link](https://github.com/Singhsansar/Pneumonia-detection) to know more about the code.")
