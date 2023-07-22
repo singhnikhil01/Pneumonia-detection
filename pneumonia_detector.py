@@ -7,19 +7,9 @@ import os
 import cv2 as cv
 
 
-st.markdown(
-    """
-    <style>
-    body {
-        color: white;
-        background-color: black;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 
 
+st.set_page_config(page_title='PNEUMONIA DETECTION SYSTEM', page_icon=':lungs:', layout='wide', initial_sidebar_state='auto', theme='dark')
 st.markdown("<h1 style='text-align: center; color: white;'>PNEUMONIA DETECTION SYSTEM</h1>", unsafe_allow_html=True)
 st.text("")
 tab1,tab12 = st.tabs(["Check for Pneumonia","Know the Model"])
