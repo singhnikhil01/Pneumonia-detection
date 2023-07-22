@@ -73,12 +73,12 @@ with tab12:
     interpreter.summary(print_fn=lambda x: st.text(x))
 
     st.header("The loss plot for validation and train set")
-    image1 = Image.open("val_train_loss.jpeg")
+    image1 = Image.open("val_train_loss.jpg")
     st.caption("The orange line represents the validation curve")
     st.caption("The blue line represents the train curve")
 
     st.header("The accuracy plot for train and test set")
-    image2 = Image.open("acc_train_test.jpeg")
+    image2 = Image.open("acc_train_test.jpg")
     st.image(image2)
     
     st.write("Check out this [link](https://github.com/Singhsansar/Pneumonia-detection) to know more about the code.")
