@@ -7,7 +7,6 @@ from tensorflow.keras.preprocessing import image
 from PIL import Image
 import time
 import cv2 as cv
-
 from streamlit_login_auth_ui.widgets import __login__
 
 __login__obj = __login__(auth_token="courier_auth_token",
@@ -47,8 +46,9 @@ if LOGGED_IN == True:
                             st.info(result)
     
         def predict(img):
+            model_url = "https://github.com/Singhsansar/Pneumonia-detection/blob/main/transfer_learning.h5"
             model_path = "transfer_learning.h5"
-            interpreter = tf.keras.models.load_model(model_path)
+            interpreter = load_model_from_url(model_url, model_path)
             # interpreter.summary(print_fn=lambda x: st.text(x))
             image = img.convert('RGB')
             image = np.array(image)
@@ -73,8 +73,9 @@ if LOGGED_IN == True:
     with tab12:
         st.header("The layers used in the model:")
         st.text(" ")
-        model_path = "images/transfer_learning.h5"
-        interpreter = tf.keras.models.load_model(model_path)
+        model_url = "https://github.com/Singhsansar/Pneumonia-detection/blob/main/transfer_learning.h5"
+        model_path = "transfer_learning.h5"
+        interpreter = load_model_from_url(model_url, model_path)
         interpreter.summary(print_fn=lambda x: st.text(x))
         
         st.header("The loss plot for validation and train set")
