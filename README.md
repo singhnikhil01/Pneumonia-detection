@@ -1,5 +1,5 @@
 # Pneumonia-detection
 
-## Visit
+## https://pneumonia-detection-team.streamlit.app/
 
-[link](https://pnemuniadetection.onrender.com)
+[link](https://pneumonia-detection-team.streamlit.app/)
